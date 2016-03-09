@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.cs">
+<script rc="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="./resources/jquery.mobile-1.4.5.min.css">
+    <script src="./resources/jquery-2.2.1.js"></script>
+	<script src="./resources/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .a-btn{
+            font-size: 10px
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body >
+<div data-role="page" id="pageone" >
+
+    <!------------Header------>
+<div data-role="header">
+      <h1>M I S  - 2015</h1>
+    <a href="#pagetwo" class="ui-grid-b">&nbsp;||||</a>
+</div>  
+     
+    <hr/>
+<!-------------Page Content-------------->
+  <div data-role="main" class="ui-content">
+    <div class="ui-grid-b">
+<p>For Farmer's</p>
+      <div class="ui-block-a">
+        <a href="farmer/priceCalc.html" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a><br>
+      </div>
+      <div class="ui-block-b">
+        <a href="farmer/Vendor-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Vendor's <br>Contact</a><br>
+      </div>
+      <div class="ui-block-c">
+        <a href="farmer/advertise.html" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-top a-btn"><br><br>Advertise</a><br>
+      </div>
+    </div>
+      
+
+      <!--! farmers grid ends-->
+               
+
+    <div class="ui-grid-a">
+<p>For Vendor's</p>
+      <div class="ui-block-a">
+        <a href="vendor/farmer-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Farmer's <br>Contact</a><br>
+      
+      </div>
+
+      <div class="ui-block-b">
+        <a href="vendor/advertise.html" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-top a-btn"><br><br>Requirement</a><br>
+      </div>
+    </div>
+        
+      
+      <!--! Vendors grid ends-->
+  </div>
+<!-------------Footer-------------->
+  <div data-role="footer">
+      <div data-role="navbar">
+    <ul>
+      <li><a href="#anylink">Fertilizers</a></li>
+      <li><a href="#anylink">Seeds</a></li>
+      <li><a href="#anylink">Insurance</a></li>
+        <li><a href="#anylink">Govt Sites</a></li>
+    </ul>
+<h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
+  </div>
+    
+      
+  </div>
+</div> 
+    <div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <div data-role="navbar">
+    <ul>
+      <li><a href="#pageone" data-icon="arrow-l" class="ui-link ui-btn ui-icon-arrow-l ui-btn-icon-top">Go back</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+            <ul data-role="listview">
+      <li><a href="./nav_pages/News.html">News</a></li>
+      <li><a href="#">MIS website</a></li>
+      <li><a href="./nav_pages/Aboutus.html">About us</a></li>
+    <li><a href="./nav_pages/ContactUS.html">Contact us</a></li>
+    </ul>
+
+  </div>
+
+  <div data-role="footer">
+    <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
+  </div>
+</div> 
+
+
+    <script>
+        $(document).ready(function(){
+  //          alert("hsdwd");
+        })
+    </script>
+</body>
+</html>
