@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8" ?>
 <widget 
 xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
@@ -16,7 +16,7 @@ version = "0.1.1 beta"
 <preference name="target-device" value="universal"/>
 <preference name="fullscreen" value="true" />
 <preference name="android-installLocation" value="auto" />
-<!-- ! Custom URL schemes !--->
+<!-- ! Custom URL schemes !-->
  <url-scheme name="com.ssnprojects.mis" role="None">
       <scheme>pgbr</scheme>
       <scheme>pgbw</scheme>
