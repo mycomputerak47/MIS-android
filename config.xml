@@ -42,7 +42,7 @@ version = "0.1.1 beta"
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />     
 <!-- ! whitelist plugin !-->
-<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin"  />
+<!--<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin"  />-->
 <access />
 <access origin="*"/>
 <plugin name="cordova-plugin-whitelist" version="1" />
