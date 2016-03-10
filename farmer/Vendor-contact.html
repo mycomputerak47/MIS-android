@@ -6,9 +6,15 @@
   <script src="../resources/jquery-2.2.1.js"></script>
     <script src="../resources/jquery.mobile-1.4.5.min.js">  </script>
     <script>
-        setTimeout(function(){
-   window.location.reload(1);
-}, 5000);
+        //to enable recienving json file in app
+        /*
+        this script is taken from this reference
+        http://community.phonegap.com/nitobi/topics/loading_json_with_ajax_working_in_local_browser_but_not_in_phonegap
+        */
+            $(document).bind("mobileinit", function() {
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
+        });
     </script>
 </head>
 <body>
