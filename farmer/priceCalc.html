@@ -40,7 +40,8 @@
                   var mandi = $("#mandi").val();
                   //alert(mandi);
                   $.ajax({
-                      url:"./../protected/php/text.php",
+                      url:"http://divakarparashar.hol.es/innovation/mobile/protected/php/text.php",
+                      //url:"../protected/php/text.php",
                       type:"get",
                       data:"mandi="+mandi,
                       success:function(e){if(e){$("#stat").html(e);}else{$("#stat").html('kaka');}}

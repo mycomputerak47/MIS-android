@@ -1,4 +1,4 @@
-MyJSONPCallback({
+MyJSONPCallback([{
     "link":"#",
     "text":"This is news"
 },
@@ -9,4 +9,4 @@ MyJSONPCallback({
 {
     "link":"#",
     "text":"This is news"
-})
+}])

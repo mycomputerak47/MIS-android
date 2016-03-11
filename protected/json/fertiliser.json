@@ -1,4 +1,4 @@
-MyJSONPCallback([{
+MyJSONPCallback({
     "name":"Lorem Ispum",
     "contact":"+91 9876543210"
 },
@@ -9,4 +9,4 @@ MyJSONPCallback([{
 {
     "name":"Lorem Ispum",
     "contact":"+91 9876543210"
-}])
+})

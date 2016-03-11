@@ -20,20 +20,9 @@
     <script src="../resources/JSON.jquery.js"></script>
 </head>
 <body>
-<div data-role="page" id="pageone">
-<div data-role="header">    
-    <h1>Notifications</h1>
-    <div data-role="navbar">
-      <ul>
-        <li><a href="../index.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div data-role="main" class="ui-content">
-      <ul data-role="listview" id="links"></ul>
-      <script>(function($) {
-var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/news.json';
+<div id="qwe"></div>
+          <script>(function($) {
+var url = './../protected/json/azadpur.json';
 //var url = 'news.json';
 $.ajax({
    type: 'GET',
@@ -43,9 +32,9 @@ $.ajax({
     contentType: "application/json",
     dataType: 'jsonp',
     success: function(json){
-	   $.each(json,function(i,j){
-                 $("#links").append("<li><a href="+j.link+" class='ui-btn ui-btn-icon-right ui-icon-carat-r'>"+j.text+"</li>");
-    console.log(j.link + j.text);
+	   $.each(json.vege,function(i,j){
+                 //$("#qwe").append("<li><a href="+j.link+" class='ui-btn ui-btn-icon-right ui-icon-carat-r'>"+j.text+"</li>");
+    console.log(j.firstName);
                 });
                  
 //console.log(json);
@@ -56,12 +45,6 @@ $.ajax({
 });
 
 })(jQuery);</script>
-  </div>
 
-  <div data-role="footer">
-    <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
-  </div>
-</div> 
-
-</body>
-</html>
+    
+    </body></html>

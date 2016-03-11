@@ -1,7 +1,27 @@
-
-hr{
-    border: 3px solid orange;
+/*{
+    color: white
 }
-.a-btn{
-     font-size:10px
+#pageone{
+    background-color:  rgba(255, 222, 0,0.6);
+}
+#header,#footer h1{
+    background-color:  rgba(101, 153, 255,0.6)
+}
+.ui-btn{
+    background-color:  #009688 !important
+}
+
+.ui-grid-a{
+margin-top: 20px;
+    background-color: rgba(00,150,136,0.3);
+}
+.ui-grid-b{
+
+    background-color: rgba(76,175,80,0.5);
+}
+*/
+.heading{
+    background-color: rgba(9, 112, 84,0.4);
+    padding: 10px;
+    text-align: center
 }

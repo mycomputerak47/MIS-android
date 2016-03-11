@@ -1,6 +1,10 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');  
 if(isset($_GET['mandi'])){
-print("hello");
+    $a = 'hello';
+print(json_encode($a));
 
-    print('foundFile');}
+    //print(json_encode(array('haha'=>'foundFile')));
+print('jaja');}
 ?>
