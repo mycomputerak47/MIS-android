@@ -7,9 +7,9 @@ versionCode = "10"
 version = "0.1.1 beta"
 >
 <name>MIS</name>
-<description>App for farmer for farmers. Test village is Pipli</description>
-this app provide best priceof crop to  famers and help the buyer to purchase crop directly from the farm
-<author href="#" email="mis">Swami Shraddhanand College, University of Delhi</author>
+<description>This app provide best price for crops to  farmers and help the buyer to purchase crop directly from the farm. Test Village is Pipli.</description>
+
+<author href="#" email="mis@ssnproject.in">Swami Shraddhanand College, University of Delhi</author>
 <platform name="ios" />
 <platform name="android" />
 <platform name="winphone" />
