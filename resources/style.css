@@ -1,19 +1,23 @@
-*{
-    color: white
-}
+html,body{
+margin:0;padding:0;}
+html{
+min-height:100%;width:100%;}
+body{width:100%;min-height:100%;}
 #pageone{
-    background-color:  rgba(255, 222, 0,0.6);
+    background-color:421c52;
+	background-color: #E0D6EB !important
 }
 #header,#footer h1{
-    background-color:  rgba(101, 153, 255,0.6)
+    background-color:  #FFF;
+	color:#000
 }
 .ui-btn{
-    background-color:  #009688 !important
+    background-color: #E0D6EB !important
 }
 
 .ui-grid-a{
 margin-top: 20px;
-    background-color: rgba(00,150,136,0.3);
+    background-color: rgba(243,156,44,0.7);
 }
 .ui-grid-b{
 
@@ -21,7 +25,11 @@ margin-top: 20px;
 }
 
 .heading{
-    background-color: rgba(9, 112, 84,0.4);
+    background-colo: rgba(9, 112, 84,0.4);
     padding: 10px;
     text-align: center
 }
+#footer{
+position:absolute;
+bottom:0;
+width:100%}

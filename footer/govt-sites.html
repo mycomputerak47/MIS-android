@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../resources/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="../resources/style.css">
   <script src="../resources/jquery-2.2.1.js"></script>
     <script>
         //to enable recienving json file in app
@@ -25,14 +26,14 @@
     <h1>Govt Sites</h1>
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+        <li><a href="../home.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
       </ul>
     </div>
   </div>
 
   <div data-role="main" class="ui-content">
       <ul data-role="listview" id="links"></ul>
-      <script>(function($) {
+      <script>$('body').load(function() {
 var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/govt-sites.json';
 //var url = 'news.json';
 $.ajax({
@@ -55,7 +56,7 @@ $.ajax({
     }
 });
 
-})(jQuery);</script>
+});</script>
   </div>
 
   <div data-role="footer">
