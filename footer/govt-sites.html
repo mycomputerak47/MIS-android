@@ -33,7 +33,7 @@
 
   <div data-role="main" class="ui-content">
       <ul data-role="listview" id="links"></ul>
-      <script>$('body').load(function() {
+      <script>(function($) {
 var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/govt-sites.json';
 //var url = 'news.json';
 $.ajax({
@@ -56,7 +56,7 @@ $.ajax({
     }
 });
 
-});</script>
+})(jQuery);</script>
   </div>
 
   <div data-role="footer">
