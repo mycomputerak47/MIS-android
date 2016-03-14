@@ -1,18 +1,22 @@
+*{color:yellow}
 html,body{
 margin:0;padding:0;}
 html{
 min-height:100%;width:100%;}
 body{width:100%;min-height:100%;}
 #pageone{
-    background-color:421c52;
-	background-color: #E0D6EB !important
+    /*background-color:421c52;
+	background-color: #E0D6EB !important*/
+	background-color:blue;
 }
 #header,#footer h1{
-    background-color:  #FFF;
+    background-color:#FFF;
 	color:#000
 }
 .ui-btn{
-    background-color: #E0D6EB !important
+    /*background-color: #E0D6EB !important*/
+	background-color: red !important;
+	color:white
 }
 
 .ui-grid-a{
@@ -33,3 +37,6 @@ margin-top: 20px;
 position:absolute;
 bottom:0;
 width:100%}
+.ui-page-theme-a .ui-btn,html .ui-bar-a .ui-btn,html .ui-body-a .ui-btn,html body .ui-group-theme-a .ui-btn,html head+body .ui-btn.ui-btn-a,.ui-page-theme-a .ui-btn,html .ui-bar-a .ui-btn,html .ui-body-a .ui-btn,html body .ui-group-theme-a .ui-btn,html head+body .ui-btn.ui-btn-a{color:white;letter-spacing:2px;font-size:12px;text-shadow:none}
+.heading{
+padding:0px}
