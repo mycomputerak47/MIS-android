@@ -34,7 +34,23 @@
     <div class="ui-grid-b">
 <p class="heading"><u>For Farmers</u></p>
       <div class="ui-block-a">
-        <a ontouchend="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" onclick="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
+       <!-- <a ontouchend="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" onclick="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>-->
+	   <a ontouchend="openPriceCalculator" onclick="openPriceCalculator" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
+		<script>
+		// Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function openPriceCalculator() {
+         var ref = window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+		</script>
       </div>
       <div class="ui-block-b">
         <a href="farmer/Vendor-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Vendor's <br>Contact</a><br>
