@@ -36,6 +36,7 @@ version = "0.1.1 beta"
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
+	<gap:plugin name="org.li8.inappbrowser" spec="0.1" source="pgb" />
 <!-- ! whitelist plugin !-->
 <!--<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin"  />-->
 <access />
