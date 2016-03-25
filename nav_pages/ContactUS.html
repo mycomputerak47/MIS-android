@@ -6,6 +6,10 @@
   <link rel="stylesheet" type="text/css" href="../resources/style.css">
   <script src="../resources/jquery-2.2.1.js"></script>
       <script src="../resources/jquery.mobile-1.4.5.min.js">  </script>
+	  <style>
+	  *,a{color:;}
+	  .ui-grid-b{padding:10px}
+	  </style>
 </head>
 <body>
 <div data-role="page" id="pageone">
@@ -19,11 +23,19 @@
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Contact Us page content</p>
-    
+    <p>Contact Us</p>
+	<div class="ui-grid-b">
+    Visit our website :<br>
+	<a href="http://www.ssnproject.in">www.ssnproject.in</a>
+    </div><hr>
+	<div class="ui-grid-b">
+    SSN College website :<br>
+	<a href="http://www.ssncollege.com">www.ssncollege.com</a>
+    </div><hr>
+	
   </div>
 
-  <div data-role="footer">
+  <div data-role="footer" id="footer">
     <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
   </div>
 </div> 
