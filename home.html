@@ -44,11 +44,26 @@
     // device APIs are available
     //
     function openPriceCalculator() {
-         var ref = window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
-         ref.addEventListener('loadstart', function(event) { /*alert('start: ' + event.url);*/ });
-         ref.addEventListener('loadstop', function(event) { /*alert('stop: ' + event.url);*/ });
-         ref.addEventListener('loaderror', function(event) { /*alert('error: ' + event.message);*/ });
-         ref.addEventListener('exit', function(event) { /*alert(event.type);*/ref.close(); });
+         /*var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
+         ref.addEventListener('loadstart', function(event) { 
+		 //alert('start: ' + event.url); 
+		 });
+         ref.addEventListener('loadstop', function(event) { 
+		 alert('stop: ' + event.url); 
+		 });
+         ref.addEventListener('loaderror', function(event) { 
+		 alert('error: ' + event.message); 
+		 });
+         ref.addEventListener('exit', function(event) { 
+		 //alert(event.type);
+		 ref.close(); 
+		 });*/
+		 var ref = window.open(encodeURI('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html'), '_blank', options);
+ref.addEventListener('loadstop', function(event) {        
+    if (event.url.match("closeInAppBrowser.html")) {
+        ref.close();
+    }
+});
     }
 		</script>
       </div>
