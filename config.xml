@@ -39,13 +39,14 @@ version = "0.1.1 beta"
 <!-- ! whitelist plugin !-->
 <!--<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin"  />-->
 <access />
-<access origin="*"/>
+<access origin=""/><!--access origin="*" the start was removed because found somewhere that it's a solution for allowing mailto link'-->
 <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="geo:*" />
+	<allow-intent href="mailto:*" />
 	<access origin="mailto:*" launch-external="yes" />
     <platform name="android">
         <allow-intent href="market:*" />
