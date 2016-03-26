@@ -42,10 +42,12 @@ $.ajax({
     jsonpCallback: 'MyJSONPCallback',
     contentType: "application/json",
     dataType: 'jsonp',
+	beforeSend:function(){$("#links").html('<p>loading...</a>')},
     success: function(json) {
 	   $.each(json,function(i,j){
                  $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.contact+"</li><br/>");
                 });
+				$("#links p").remove();
     },
     error: function(e) {
        console.log(e.message);
