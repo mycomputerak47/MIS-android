@@ -21,7 +21,7 @@
 <body>
 <div data-role="page" id="pageone">
   <div data-role="header">
-    <h1>Vebdor's Contact</h1>
+    <h1>Buyer's Contact</h1>
     <div data-role="navbar">
       <ul>
         <li><a href="../home.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
@@ -45,7 +45,7 @@ $.ajax({
 	beforeSend:function(){$("#links").html('<p>loading...</a>')},
     success: function(json) {
 	   $.each(json,function(i,j){
-                 $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.contact+"</li><br/>");
+                 $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":<a href='tel:+"json.contact"' data-role='none'>"+json.contact+"</a></li><br/>");
                 });
 				$("#links p").remove();
     },
