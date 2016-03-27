@@ -39,11 +39,11 @@
 		<script>
 		// Wait for device API libraries to load
     //
-//    document.addEventListener("deviceready", onDeviceReady, false);
+ document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
     //
-    /*function openPriceCalculator() {
+    function openPriceCalculator() {
          var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
          ref.addEventListener('loadstart', function(event) { 
 		 //alert('start: ' + event.url); 
@@ -57,7 +57,18 @@
          ref.addEventListener('exit', function(event) { 
 		 //alert(event.type);
 		 ref.close(); 
-		 });*/
+		 });
+		 
+//add event listner for back button
+        function onDeviceReady(){
+            document.addEventListener("backbutton",function(e){
+                if(navigator.app){
+                    navigator.app.exitApp();
+                }else if(navigator.device){
+                    navigator.device.exitApp();
+                }
+            })
+        }
 	/*	 var ref = window.open(encodeURI('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html'), '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
 ref.addEventListener('loadstop', function(event) {        
     if (event.url.match("closeInAppBrowser.html")) {
@@ -67,7 +78,7 @@ ref.addEventListener('loadstop', function(event) {
     }*/
 		</script>
 		<script type="text/javascript" charset="utf-8">
-		
+	/*	
 		// Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -104,7 +115,7 @@ ref.addEventListener('loadstop', function(event) {
          iabRef.removeEventListener('loaderror', iabLoadError);
          iabRef.addEventListener('exit', iabClose);
     }
-
+*/
     
 		</script>
       </div>
