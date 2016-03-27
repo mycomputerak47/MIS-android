@@ -97,7 +97,7 @@ ref.addEventListener('loadstop', function(event) {
 
     // device APIs are available
     //
-    function onDeviceReady() {
+    function openPriceCalculator() {
          iabRef = window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php', '_blank', 'location=yes');
          iabRef.addEventListener('loadstart', iabLoadStart);
          iabRef.addEventListener('loadstop', iabLoadStop);
