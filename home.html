@@ -43,8 +43,8 @@
 
     // device APIs are available
     //
-    function openPriceCalculator() {
-         /*var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
+    /*function openPriceCalculator() {
+         var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
          ref.addEventListener('loadstart', function(event) { 
 		 //alert('start: ' + event.url); 
 		 });
@@ -76,11 +76,11 @@ ref.addEventListener('loadstop', function(event) {
     var iabRef = null;
 
     function iabLoadStart(event) {
-        alert(event.type + ' - ' + event.url);
+        //alert(event.type + ' - ' + event.url);
     }
 
     function iabLoadStop(event) {
-        alert(event.type + ' - ' + event.url);
+        //alert(event.type + ' - ' + event.url);
     }
 
     function iabLoadError(event) {
@@ -98,7 +98,7 @@ ref.addEventListener('loadstop', function(event) {
     // device APIs are available
     //
     function onDeviceReady() {
-         iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+         iabRef = window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php', '_blank', 'location=yes');
          iabRef.addEventListener('loadstart', iabLoadStart);
          iabRef.addEventListener('loadstop', iabLoadStop);
          iabRef.removeEventListener('loaderror', iabLoadError);
