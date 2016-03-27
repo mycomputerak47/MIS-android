@@ -58,7 +58,7 @@
 		 //alert(event.type);
 		 ref.close(); 
 		 });*/
-		 var ref = window.open(encodeURI('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html'), '_blank', options);
+		 var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
 ref.addEventListener('loadstop', function(event) {        
     if (event.url.match("closeInAppBrowser.html")) {
         ref.close();
