@@ -36,13 +36,8 @@
       <div class="ui-block-a">
        <!-- <a ontouchend="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" onclick="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>-->
 	   <a ontouchend="openPriceCalculator()" onclick="openPriceCalculator()" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
-		<script>
-		// Wait for device API libraries to load
-    //
- document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
+		<script  type="text/javascript" charset="utf-8">
+		
     function openPriceCalculator() {
          var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
          ref.addEventListener('loadstart', function(event) { 
@@ -58,7 +53,11 @@
 		 //alert(event.type);
 		 ref.close(); 
 		 });
-		 
+        // Wait for device API libraries to load
+    //
+    // device APIs are available
+    //
+document.addEventListener("deviceready", onDeviceReady, false);		 
 //add event listner for back button
         function onDeviceReady(){
             document.addEventListener("backbutton",function(e){
