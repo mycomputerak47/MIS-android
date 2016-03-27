@@ -60,6 +60,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);		 
 //add event listner for back button
         function onDeviceReady(){
+            alert('device Api is ready');
             document.addEventListener("backbutton",function(e){
                 if(navigator.app){
                     navigator.app.exitApp();
