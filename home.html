@@ -35,9 +35,10 @@
 <p class="heading"><u>For Farmers</u></p>
       <div class="ui-block-a">
        <!-- <a ontouchend="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" onclick="window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php','_blank','location=yes','closebuttoncaption=Return');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>-->
-	   <a ontouchend="openPriceCalculator()" onclick="openPriceCalculator()" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
+	   <a href="#" onclick="openInAppBrowserBlank('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
+	   <!--<a ontouchend="openPriceCalculator()" onclick="openPriceCalculator()" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>-->
 		<script  type="text/javascript" charset="utf-8">
-		
+		/*
     function openPriceCalculator() {
          var ref = window.open('http://divakarparashar.hol.es/innovation/mobile/test/destPage.html', '_blank', 'location=yes','disallowoverscroll=no','toolbar=yes');
          ref.addEventListener('loadstart', function(event) { 
@@ -52,7 +53,7 @@
          ref.addEventListener('exit', function(event) { 
 		 //alert(event.type);
 		 ref.close(); 
-		 });
+		 });*/
         // Wait for device API libraries to load
     //
     // device APIs are available
@@ -76,48 +77,27 @@ ref.addEventListener('loadstop', function(event) {
     }
 });
     }*/
+	var ref = '';
+	function openInAppBrowserBlank(url){
+	try{
+		ref = window.open(encodeURI(url),'_blank','location=no');
+		ref.addEventListener('loadstop', LoadStop);
+		ref.addEventListner('exit',Close);	
+	}
+	catch(err){
+	alert(err);
+	}
+	}
+	function LoadStop(event){
+	if(event.url == 'http://divakarparashar.hol.es/innovation/mobile/test/closeInAppBrowser.html'){
+	ref.close();}
+	}
+	function Close(event){
+	ref.removeEventListner('loadstop',LoadStop);
+	ref.removeEventListner('exit',Close);
+	}
 		</script>
-		<script type="text/javascript" charset="utf-8">
-	/*	
-		// Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Global InAppBrowser reference
-    var iabRef = null;
-
-    function iabLoadStart(event) {
-        //alert(event.type + ' - ' + event.url);
-    }
-
-    function iabLoadStop(event) {
-        //alert(event.type + ' - ' + event.url);
-    }
-
-    function iabLoadError(event) {
-        alert(event.type + ' - ' + event.message);
-    }
-
-    function iabClose(event) {
-         alert(event.type);
-         iabRef.removeEventListener('loadstart', iabLoadStart);
-         iabRef.removeEventListener('loadstop', iabLoadStop);
-         iabRef.removeEventListener('loaderror', iabLoadError);
-         iabRef.removeEventListener('exit', iabClose);
-    }
-
-    // device APIs are available
-    //
-    function openPriceCalculator() {
-         iabRef = window.open('http://www.ssnproject.in/en/user/farmer/expense-calc.php', '_blank', 'location=yes');
-         iabRef.addEventListener('loadstart', iabLoadStart);
-         iabRef.addEventListener('loadstop', iabLoadStop);
-         iabRef.removeEventListener('loaderror', iabLoadError);
-         iabRef.addEventListener('exit', iabClose);
-    }
-*/
-    
-		</script>
+		
       </div>
       <div class="ui-block-b">
         <a href="farmer/Vendor-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Vendor's <br>Contact</a><br>
