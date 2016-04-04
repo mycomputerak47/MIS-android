@@ -68,8 +68,13 @@ $.ajax({
                 });
 				$("#links p").remove();
     },
-    error: function(e) {
-       console.log(e.message);
+	timeout:1000,
+    error: function(x, t, m) {
+        if(t==="timeout") {
+            alert("got timeout");
+        } else {
+            alert(t);
+        }
     }
 });
 
