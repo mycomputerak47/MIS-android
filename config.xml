@@ -48,9 +48,10 @@ version = "0.1.1 beta"
     <allow-intent href="geo:*" />
 	<allow-intent href="mailto:*" />
 	<access origin="mailto:*" launch-external="yes" />
-	<uses-permission android:name="android.permission.INTERNET" />
+	
     <platform name="android">
         <allow-intent href="market:*" />
+		<uses-permission android:name="android.permission.INTERNET" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
