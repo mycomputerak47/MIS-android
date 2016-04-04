@@ -35,7 +35,7 @@ function myFunction(xhttp) {
 </script>
 
 </head>
-<body onload="loadDoc('../inc/footer.html', myFunction)">
+<body>
 <div data-role="page" id="pageone">
   <div data-role="header">
     <h1>Buyer's Contact</h1>
@@ -62,7 +62,9 @@ $.ajax({
 	beforeSend:function(){$("#links").html('<p>loading...</a>')},
     success: function(json) {
 	   $.each(json,function(i,j){
-                 $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+                 try{$("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+				 }
+				 catch(err){alert(err);}
                 });
 				$("#links p").remove();
     },
@@ -72,10 +74,20 @@ $.ajax({
 });
 
 })(jQuery);</script>
+
   </div>
 
   <div data-role="footer" id="footer">
-    <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
+    <div data-role="navbar">
+        <a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>
+		<a href="mailto:physics.ssn@gmail.com?Subject=mail-from-MIS" target="_top" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow">mail</a>
+		<!--<a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>-->
+<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a></h1>
+<script>
+$(document).ready(function(){
+$("#tollFree").removeClass('ui-btn')})
+</script>
+  </div>
   </div>
 </div> 
 

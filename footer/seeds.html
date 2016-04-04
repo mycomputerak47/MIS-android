@@ -31,6 +31,7 @@
 
   <div data-role="main" class="ui-content">
     <p>Seeds Dealers</p>
+	<p></p>
     <ul data-role="listview" id="links"></ul>
       <script>(function($) {
 var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/seeds.json';
@@ -43,10 +44,12 @@ $.ajax({
     contentType: "application/json",
     dataType: 'jsonp',
     success: function(json) {
-	   $.each(json,function(i,j){
-                 $("#links").append("<li class='ui-btn' style='padding:10px'>"+j.name +":"+j.contact+"</li><br/>");
+	      $.each(json,function(i,j){
+                 try{$("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+				 }
+				 catch(err){alert(err);}
                 });
-    },
+				$("#links p").remove();    },
     error: function(e) {
        console.log(e.message);
     }
