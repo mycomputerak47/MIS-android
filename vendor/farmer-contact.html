@@ -17,8 +17,25 @@
             $.mobile.allowCrossDomainPages = true;
         });
     </script>
+	<script>
+function loadDoc(url, cfunc) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      cfunc(xhttp);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function myFunction(xhttp) {
+  document.getElementById("footer").innerHTML = xhttp.responseText;
+}
+</script>
+
 </head>
-<body>
+<body onload="loadDoc('../inc/footer.html',myFunction)">
 <div data-role="page" id="pageone">
   <div data-role="header">
     <h1>Farmer's contact</h1>
@@ -44,7 +61,7 @@ $.ajax({
 	beforeSend:function(){$("#links").html('<p>loading...</a>')},
     success: function(json) {
 	   $.each(json,function(i,j){
-                              $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.contact+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+                              $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
                 });
 				$("#links p").remove();
     },
