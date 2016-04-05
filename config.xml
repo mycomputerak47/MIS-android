@@ -1,63 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<widget id="com.ssnprojects.mis" version="0.1.1" xmlns="http://www.w3.org/ns/widgets">
-    <name> MIS
-</name>
-    <description> This app provide best price for crops to  farmers and help the buyer to purchase crop directly from the farm. Test Village is Pipli. </description>
-    <author href="#" email="mis@ssnproject.in">Swami Shraddhanand College, University of Delhi</author>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="loglevel" value="DEBUG" />
-    <feature name="Globalization">
-        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
-    </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Media">
-        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-    </feature>
-    <feature name="Accelerometer">
-        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
-    </feature>
-    <feature name="Battery">
-        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="Compass">
-        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
-    </feature>
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
-    <preference name="android-installLocation" value="auto" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget 
+xmlns = "http://www.w3.org/ns/widgets"
+xmlns:gap = "http://phonegap.com/ns/1.0"
+id = "com.ssnprojects.mis"
+versionCode = "10"
+version = "0.1.1 beta"
+>
+<name>MIS</name>
+<description>This app provide best price for crops to  farmers and help the buyer to purchase crop directly from the farm. Test Village is Pipli.</description>
+
+<author href="#" email="mis@ssnproject.in">Swami Shraddhanand College, University of Delhi</author>
+<platform name="ios" />
+<platform name="android" />
+<platform name="winphone" />
+<preference name="orientation" value="default"/>
+<preference name="target-device" value="universal"/>
+<preference name="fullscreen" value="true" />
+<preference name="android-installLocation" value="auto" />
+<!-- ! Custom URL schemes !-->
+ <url-scheme name="com.ssnprojects.mis" role="None">
+      <scheme>pgbr</scheme>
+      <scheme>pgbw</scheme>
+    </url-scheme>
+<!-- ! xml description from here are referenced from here https://github.com/phonegap/phonegap-start/blob/master/www/config.xml !-->
+<!-- ! Core plugins !-->
+<gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+	<plugin name="com.cordova.plugin.inappbrowser.with.loading.spinner" spec="1.0.13" source="pgb" />
+<!-- ! whitelist plugin !-->
+<!--<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin"  />-->
+<access />
+<access origin=""/><!--access origin="*" the start was removed because found somewhere that it's a solution for allowing mailto link'-->
+<plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-	<platform name="android">
+	<allow-intent href="mailto:*" />
+	<access origin="mailto:*" launch-external="yes" />
+	
+    <platform name="android">
         <allow-intent href="market:*" />
 		
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
     </platform>
 </widget>
