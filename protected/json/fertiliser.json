@@ -1,15 +1,12 @@
 MyJSONPCallback({
     "name":"Lorem Ispum",
-	"location":"this location",
     "contact":"+91 9876543210"
 },
 {
     "name":"Lorem Ispum",
-	"location":"this location",
     "contact":"+91 9876543210"
 },
 {
     "name":"Lorem Ispum",
-	"location":"this location",
     "contact":"+91 9876543210"
 })

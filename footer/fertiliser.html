@@ -31,7 +31,6 @@
 
   <div data-role="main" class="ui-content">
     <p>Fertiliser dealers</p>
-	<p></p>
     <ul data-role="listview" id="links"></ul>
       <script>(function($) {
 var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/fertiliser.json';
@@ -45,11 +44,9 @@ $.ajax({
     dataType: 'jsonp',
     success: function(json) {
 	   $.each(json,function(i,j){
-                 try{$("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
-				 }
-				 catch(err){alert(err);}
+                 $("#links").append("<li class='ui-btn' style='padding:10px'>"+j.name +":"+j.contact+"</li><br/>");
                 });
-				$("#links p").remove();    },
+    },
     error: function(e) {
        console.log(e.message);
     }
@@ -58,7 +55,7 @@ $.ajax({
 })(jQuery);</script>
   </div>
 
-  <div data-role="footer" id="footer">
+  <div data-role="footer">
     <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
   </div>
 </div> 

@@ -17,36 +17,20 @@
             $.mobile.allowCrossDomainPages = true;
         });
     </script>
-	<script>
-function loadDoc(url, cfunc) {
-  var xhttp;
-  xhttp=new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      cfunc(xhttp);
-    }
-  };
-  xhttp.open("GET", url, true);
-  xhttp.send();
-}
-function myFunction(xhttp) {
-  document.getElementById("footer").innerHTML = xhttp.responseText;
-}
-</script>
-
 </head>
-<body onload="loadDoc('../inc/footer.html',myFunction)">
+<body>
 <div data-role="page" id="pageone">
   <div data-role="header">
-    <h1>Farmer's contact</h1>
+    <h1>About Us</h1>
     <div data-role="navbar">
       <ul>
         <li><a href="../home.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
       </ul>
     </div>
   </div>
+
   <div data-role="main" class="ui-content">
-    <p></p>
+    <p>Farmer's contact</p>
     <ul data-role="listview" id="links"></ul>
       <script>(function($) {
 var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/farmer-contact.json';
@@ -58,12 +42,10 @@ $.ajax({
     jsonpCallback: 'MyJSONPCallback',
     contentType: "application/json",
     dataType: 'jsonp',
-	beforeSend:function(){$("#links").html('<p>loading...</a>')},
     success: function(json) {
 	   $.each(json,function(i,j){
-                              $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+          $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
                 });
-				$("#links p").remove();
     },
     error: function(e) {
        console.log(e.message);
@@ -73,7 +55,7 @@ $.ajax({
 })(jQuery);</script>
   </div>
 
-  <div data-role="footer" id="footer">
+  <div data-role="footer">
     <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
   </div>
 </div> 

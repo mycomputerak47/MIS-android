@@ -9,7 +9,7 @@
 <body>
 <div data-role="page" id="pageone">
   <div data-role="header">
-    <h1>Price Calculator</h1>
+    <h1>About Us</h1>
     <div data-role="navbar">
       <ul>
         <li><a href="../home.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
@@ -17,10 +17,12 @@
     </div>
   </div>
 
-  <div data-role="main" class="ui-content">   
+  <div data-role="main" class="ui-content">
+    <p>Price Calculator</p>
+      <form method="GET" action="http://divakarparashar.hol.es/innovation/mobile/nav_pages/text.php" id="this">
   <fieldset class="ui-field-contain">
       <p>Your Location : Pipli</p>
-    <!--<label for="day">Select Mandi</label>-->
+    <label for="day">Select Mandi</label>
     <select name="mandi" id="mandi">
         <option selected disabled>Select Mandi</option>
         <option value="azadpur">Azadpur</option>
@@ -28,32 +30,22 @@
         <option value="Sonepat">Sonepat</option>
         <option value="Narela">Narela</option>
     </select>
-	<!-- ! All crop types in pipli-->
-	<select name="crtyp" id="crtyp">
-        <option selected disabled>Select Crop Type</option>
-        <option value="Vegetables">Vegetables</option>
-        <option value="Fruits">Fruits</option>
-        <option value="Cereals">Cereals</option>
-    </select>
   </fieldset>
           <p id="stat"></p>
-          <input type="submit" value="submit" id="foo">
-
+          <input type="submit" value="submit">
+</form>
       <script>
           $(document).ready(function(){
-              $("#foo").click(function(){
-                  var nameMandi = $("#mandi").val();
-				  var cropType = $("#crtype").val();
-                  //alert(nameMandi+cropType);
+              $("#this").submit(function(){
+                  var mandi = $("#mandi").val();
+                  //alert(mandi);
                   $.ajax({
-                      url:"http://divakarparashar.hol.es/innovation/en/user/farmer/register/expnscal/cropname.php",
+                      url:"http://divakarparashar.hol.es/innovation/mobile/protected/php/text.php",
+                      //url:"../protected/php/text.php",
                       type:"get",
-					  crossDomain:"true",
-					  dataType:"json",
-                      data:"nameMandi="+nameMandi+"&cropType="+cropType,
-                      success:function(e){if(e){$("#stat").html(e);}else{$("#stat").html('kaka');}},
-					  error:function(e){console.log(e)}
-                  });
+                      data:"mandi="+mandi,
+                      success:function(e){if(e){$("#stat").html(e);}else{$("#stat").html('kaka');}}
+                  });return false;
               });
           });
       </script>
