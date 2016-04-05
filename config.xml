@@ -53,8 +53,5 @@ version = "0.1.1 beta"
         <allow-intent href="market:*" />
 		
     </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+    
 </widget>
