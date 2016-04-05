@@ -22,6 +22,9 @@ version = "0.1.1 beta"
       <scheme>pgbr</scheme>
       <scheme>pgbw</scheme>
     </url-scheme>
+	<feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
 <!-- ! xml description from here are referenced from here https://github.com/phonegap/phonegap-start/blob/master/www/config.xml !-->
 <!-- ! Core plugins !-->
 <gap:plugin name="org.apache.cordova.battery-status" />
