@@ -22,9 +22,6 @@ version = "0.1.1 beta"
       <scheme>pgbr</scheme>
       <scheme>pgbw</scheme>
     </url-scheme>
-	<feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    </feature>
 <!-- ! xml description from here are referenced from here https://github.com/phonegap/phonegap-start/blob/master/www/config.xml !-->
 <!-- ! Core plugins !-->
 <gap:plugin name="org.apache.cordova.battery-status" />
@@ -35,26 +32,26 @@ version = "0.1.1 beta"
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-	<plugin name="com.cordova.plugin.inappbrowser.with.loading.spinner" spec="1.0.13" source="pgb" />
 <!-- ! whitelist plugin !-->
 <!--<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin"  />-->
 <access />
-<access origin=""/><!--access origin="*" the start was removed because found somewhere that it's a solution for allowing mailto link'-->
+<access origin="*"/>
 <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-	<allow-intent href="mailto:*" />
-	<access origin="mailto:*" launch-external="yes" />
-	
     <platform name="android">
         <allow-intent href="market:*" />
-		
     </platform>
-    
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
 </widget>
