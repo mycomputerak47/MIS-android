@@ -32,7 +32,30 @@
     <div class="ui-grid-b">
 <p class="heading"><u>For Farmers</u></p>
       <div class="ui-block-a">
-        <a href="http://www.ssnproject.in/en/user/farmer/expense-calc.php" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
+        <a href="#" onclick="openInAppBrowserBlank('http://ssnproject.in/en/user/mobile/expanse-calc.php');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
+		<script  type="text/javascript" charset="utf-8">
+		document.addEventListener("deviceready", onDeviceReady, false);		 
+	var ref = '';
+	function openInAppBrowserBlank(url){
+	try{
+		ref = window.open(encodeURI(url),'_blank','location=no');
+		ref.addEventListener('loadstop', LoadStop);
+		ref.addEventListner('exit',Close);	
+	}
+	catch(err){
+	//alert(err);
+	}
+	}
+	function LoadStop(event){
+	if(event.url == 'http://ssnproject.in/en/user/mobile/close.htm'){
+	ref.close();}
+	}
+	function Close(event){
+	ref.removeEventListner('loadstop',LoadStop);
+	ref.removeEventListner('exit',Close);
+	}
+		</script>
+		
       </div>
       <div class="ui-block-b">
         <a href="farmer/Vendor-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Vendor's <br>Contact</a><br>
@@ -63,14 +86,15 @@
   </div>
 <!-------------Footer-------------->
   <div data-role="footer" >
-      <div data-role="navbar">
-    <ul>
-      <li><a href="./footer/fertiliser.html">Fertilizers</a></li>
-      <li><a href="./footer/seeds.html">Seeds</a></li>
-      <li><a href="./footer/insurance.html">Insurance</a></li>
-        <li><a href="./footer/govt-sites.html">Govt Sites</a></li>
-    </ul>
-<h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
+          <div data-role="navbar">
+        <a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>
+		<a href="mailto:physics.ssn@gmail.com?Subject=mail-from-MIS" target="_top" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow">mail</a>
+		<!--<a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>-->
+<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a></h1>
+<script>
+$(document).ready(function(){
+$("#tollFree").removeClass('ui-btn')})
+</script>
   </div>
     
       
@@ -91,12 +115,25 @@
       <li><a href="http://www.ssnproject.in/">MIS website</a></li>
       <li><a href="./nav_pages/Aboutus.html">About us</a></li>
     <li><a href="./nav_pages/ContactUS.html">Contact us</a></li>
+	<li><a href="./footer/fertiliser.html">Fertilizers</a></li>
+      <li><a href="./footer/seeds.html">Seeds</a></li>
+      <li><a href="./footer/insurance.html">Insurance</a></li>
+        <li><a href="./footer/govt-sites.html">Govt Sites</a></li>
     </ul>
 
   </div>
 
   <div data-role="footer" id="footer">
-    <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
+        <div data-role="navbar">
+        <a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>
+		<a href="mailto:physics.ssn@gmail.com?Subject=mail-from-MIS" target="_top" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow">mail</a>
+		<!--<a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>-->
+<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a></h1>
+<script>
+$(document).ready(function(){
+$("#tollFree").removeClass('ui-btn')})
+</script>
+  </div>
   </div>
 </div> 
 
