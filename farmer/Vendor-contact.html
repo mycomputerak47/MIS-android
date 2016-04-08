@@ -33,7 +33,7 @@
     <p></p>
     <ul data-role="listview" id="links"></ul>
       <script>(function($) {
-var url = 'http://divakarparashar.hol.es/innovation/mobile/protected/json/vendor-contact.json';
+var url = 'http://ssnproject.in/en/user/mobile/protected/json/vendor-contact.json';
 
 $.ajax({
    type: 'GET',
@@ -44,7 +44,7 @@ $.ajax({
     dataType: 'jsonp',
     success: function(json) {
 	   $.each(json,function(i,j){
-                $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+                $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<br/>Interest : "json.interest"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
                 });
     },
     error: function(e) {
