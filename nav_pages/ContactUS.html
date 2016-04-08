@@ -24,19 +24,30 @@
 
   <div data-role="main" class="ui-content">
     <p>Contact Us</p>
-	<div class="ui-grid-b">
+	<div class="ui-btn">
     Visit our website :<br>
-	<a href="http://www.ssnproject.in">www.ssnproject.in</a>
+	<a href="http://www.ssnproject.in" style="color:white">www.ssnproject.in</a>
     </div><hr>
-	<div class="ui-grid-b">
+	<div class="ui-btn">
     SSN College website :<br>
-	<a href="http://www.ssncollege.com">www.ssncollege.com</a>
+	<a href="http://www.ssncollege.com"style="color:white">www.ssncollege.com</a>
     </div><hr>
 	
   </div>
 
   <div data-role="footer" id="footer">
-    <h1 class="ui-title" role="heading" aria-level="1">Farmer's Helpline. Toll free<br>1800 180 1551</h1>
+    <div data-role="navbar">
+        <a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>
+		<a href="mailto:physics.ssn@gmail.com?Subject=mail-from-MIS" target="_top" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow">mail</a>
+		<!--<a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>-->
+<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a><br/>&copy; ssnproject.in</h1>
+
+      
+<script>
+$(document).ready(function(){
+$("#tollFree").removeClass('ui-btn')})
+</script>
+  </div>
   </div>
 </div> 
 

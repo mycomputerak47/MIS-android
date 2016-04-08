@@ -21,7 +21,7 @@
 <body>
 <div data-role="page" id="pageone">
   <div data-role="header">
-    <h1>Vebdor's Contact</h1>
+    <h1>Vendor's Contact</h1>
     <div data-role="navbar">
       <ul>
         <li><a href="../home.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
@@ -44,7 +44,7 @@ $.ajax({
     dataType: 'jsonp',
     success: function(json) {
 	   $.each(json,function(i,j){
-                $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<br/>Interest : "json.interest"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+                $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<br/>Interest : "+json.interest+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
                 });
     },
     error: function(e) {
@@ -60,7 +60,7 @@ $.ajax({
         <a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>
 		<a href="mailto:physics.ssn@gmail.com?Subject=mail-from-MIS" target="_top" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow">mail</a>
 		<!--<a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>-->
-<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a></h1>
+<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a><br>&copy; ssnproject.in</h1>
 <script>
 $(document).ready(function(){
 $("#tollFree").removeClass('ui-btn')})
