@@ -5,12 +5,22 @@
 <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.cs">
 <script rc="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 
-    <link rel="stylesheet" type="text/css" href="./resources/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="./resources/style.css">
-    <script src="cordova.js"></script>
-	<script src="./resources/jquery-2.2.1.js"></script>
-	<script src="./resources/jquery.mobile-1.4.5.min.js"></script>
-	
+  <link rel="stylesheet" href="../resources/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="../resources/style.css">
+  <script src="../resources/jquery-2.2.1.js"></script>
+    <script src="../resources/jquery.mobile-1.4.5.min.js">  </script>
+    <script>
+        //to enable recienving json file in app
+        /*
+        this script is taken from this reference
+        http://community.phonegap.com/nitobi/topics/loading_json_with_ajax_working_in_local_browser_but_not_in_phonegap
+        */
+            $(document).bind("mobileinit", function() {
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
+        });
+    </script>
+
     <style>
         .a-btn{
             font-size: 10px
@@ -20,22 +30,9 @@
         }
     </style>
 </head>
-<body >
-<div data-role="page" id="pageone">
 
-    <!------------Header------>
-<div data-role="header" id="header">
-      <h1 style="color:#000">M I S  - 2015</h1>
-    <a href="#pagetwo" class="ui-grid-b">&nbsp;||||</a>
-</div>  
-<img src="resources/headerimage.jpg" alt="IP-306" style="width:100%;height:auto;"/ >
-<!-------------Page Content-------------->
-  <div data-role="main" class="ui-content">
-    <div class="ui-grid-b">
-<p class="heading"><u>For Farmers</u></p>
-      <div class="ui-block-a">
-        <a href="#" onclick="openInAppBrowserBlank('http://ssnproject.in/en/user/mobile/expense-calc.php');" class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn"><br>Price <br>Calculator</a>
-		<script  type="text/javascript" charset="utf-8">
+<body >
+<script  type="text/javascript" charset="utf-8">
 		document.addEventListener("deviceready", onDeviceReady, false);		 
 	var ref = '';
 	function openInAppBrowserBlank(url){
@@ -58,13 +55,30 @@
 	}
 		</script>
 		
-      </div>
-      <div class="ui-block-b">
-        <a href="http://www.ssnproject.in/en/user/farmer/advertisement.php" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-top a-btn"><br><br>Advertise</a><br>
+<div data-role="page" id="pageone">
+
+    <!------------Header------>
+<div data-role="header" id="header">
+      <h1 style="color:#000">Tools</h1>
+    <a href="./../home.html" class="ui-grid-b">&nbsp;||||</a>
+</div>  
+<img src="resources/headerimage.jpg" alt="IP-306" style="width:100%;height:auto;"/ >
+<!-------------Page Content-------------->
+  <div data-role="main" class="ui-content">
+    <div class="ui-grid-b">
+<p class="heading"><u></u></p>
+      <div class="ui-block-a">
+        <a href="#"
+		onclick="openInAppBrowserBlank('http://agri-insurance.gov.in/Calculator.aspx');"
+		class="ui-btn ui-corner-all ui-shadow ui-icon-shop ui-btn-icon-top a-btn">
+		<br>Insurance <br>Calculator</a>
 		
       </div>
+      <div class="ui-block-b">
+        <a href="farmer/Vendor-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Vendor's <br>Contact</a><br>
+      </div>
       <div class="ui-block-c">
-			<a href="farmer/index.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Support <br/>Services</a><br>
+        <a href="http://www.ssnproject.in/en/user/farmer/advertisement.php" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-top a-btn"><br><br>Advertise</a><br>
       </div>
     </div>
       
@@ -75,12 +89,12 @@
     <div class="ui-grid-a">
 <p class="heading"><u>For Buyers</u></p>
       <div class="ui-block-a">
-        
-        <a href="http://www.ssnproject.in/en/user/vendor/advertisement.php" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-top a-btn"><br><br>Requirement</a><br>      
+        <a href="vendor/farmer-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Farmer's <br>Contact</a><br>
+      
       </div>
 
       <div class="ui-block-b">
-<a href="vendor/farmer-contact.html" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-top a-btn"><br>Farmer's <br>Contact</a><br>
+        <a href="http://www.ssnproject.in/en/user/vendor/advertisement.php" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-top a-btn"><br><br>Requirement</a><br>
       </div>
     </div>
         

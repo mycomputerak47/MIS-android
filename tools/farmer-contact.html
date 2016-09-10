@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../resources/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="../resources/style.css">
+  <script src="../resources/jquery-2.2.1.js"></script>
+    <script src="../resources/jquery.mobile-1.4.5.min.js">  </script>
+    <script>
+        //to enable recienving json file in app
+        /*
+        this script is taken from this reference
+        http://community.phonegap.com/nitobi/topics/loading_json_with_ajax_working_in_local_browser_but_not_in_phonegap
+        */
+            $(document).bind("mobileinit", function() {
+            $.support.cors = true;
+            $.mobile.allowCrossDomainPages = true;
+        });
+    </script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1></h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="../home.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="main" class="ui-content">
+    <p></p>
+    <ul data-role="listview" id="links"></ul>
+      <script>(function($) {
+var url = 'http://ssnproject.in/en/user/mobile/protected/json/farmer-contact.json';
+
+$.ajax({
+   type: 'GET',
+    url: url,
+    async: false,
+    jsonpCallback: 'MyJSONPCallback',
+    contentType: "application/json",
+    dataType: 'jsonp',
+    success: function(json) {
+	   $.each(json,function(i,j){
+                 $("#links").append("<li class='ui-btn' style='padding:10px'>"+json.name +":"+json.location+"<br/>Interest : "+json.interest+"<a href='tel:"+json.contact+"' class='ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow'>Call us</a></li><br/>");
+                });
+    },
+    error: function(e) {
+       console.log(e.message);
+    }
+});
+
+})(jQuery);</script>
+  </div>
+
+  <div data-role="footer" id="footer">
+    <div data-role="navbar">
+        <a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>
+		<a href="mailto:physics.ssn@gmail.com?Subject=mail-from-MIS" target="_top" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow">mail</a>
+		<!--<a href="tel:+919212711976" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow">Call us</a>-->
+<h1 class="ui-title" role="heading" aria-level="1" style="font-size:10px">Farmer's Helpline. Toll free <a href="tel:+18001801551" data-role="none" id="tollFree">1800 180 1551</a><br>&copy; ssnproject.in</h1>
+<script>
+$(document).ready(function(){
+$("#tollFree").removeClass('ui-btn')})
+</script>
+  </div>
+  </div>
+</div> 
+
+</body>
+</html>
