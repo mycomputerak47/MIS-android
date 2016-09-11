@@ -5,11 +5,12 @@
 <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.cs">
 <script rc="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 
-    <link rel="stylesheet" type="text/css" href="resources/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="resources/style.css">
+     <link rel="stylesheet" type="text/css" href="./resources/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="./resources/style.css">
     <script src="cordova.js"></script>
-	<script src="resources/jquery-2.2.1.js"></script>
-	<script src="resources/jquery.mobile-1.4.5.min.js"></script>
+    <script src="phonegap.js"></script>
+	<script src="./resources/jquery-2.2.1.js"></script>
+	<script src="./resources/jquery.mobile-1.4.5.min.js"></script>
 	
     <style>
         .a-btn{
@@ -43,7 +44,7 @@
 	var ref = '';
 	function openInAppBrowserBlank(url){
 	try{
-		ref = window.open(encodeURI(url),'_blank','location=no');
+		ref = window.open(encodeURI(url),'_blank','location=yes');
 		ref.addEventListener('loadstop', LoadStop);
 		ref.addEventListner('exit',Close);	
 	}
